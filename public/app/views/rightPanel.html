@@ -1,0 +1,71 @@
+<div class="row right-panel">
+        <table>
+            <tr  ng-repeat="order in orders">
+                <td class="item-image">
+                     <img src="{{order.orderedImage}}" class="item-image" />
+                     <span class="dot">{{order.quantity}}</span>
+                </td>
+                <td class="pl-4 pr-5">
+                 <div class="notes-hdr">
+                     <h6>{{order.name}}</h6>
+                     <span class="reduced-font">N/A ships in 3 weeks</span>
+                 </div> 
+                </td>
+                <td class="pl-5">
+                    <span>${{order.originalAmount}}</span>
+                </td>            
+            </tr>
+            <tr class="horizontal-line pt-5 mt-5">
+               <td colspan="3" class="horizontal-line"  ></td>
+            </tr>
+            <tr><td><br/></td></tr>
+
+            <tr class="notes pt-5 mt-5">
+               <td colspan="3"> 
+                    <div class="notes-styl pt-2 pl-2">
+                        <span class="notes-hdr">Notes about your order</span>
+                        <ul class="notes-bdy">
+                            <li><strong>Limited Time Offer:</strong> Looking for <span class="affirm-logo"><b><em>Affirm</em></b> </span> 0% APR financing?
+                            </li>
+                            <li>
+                                    Your board will ship in 3-4 weeks.
+                            </li>
+                            <li>
+                                    We’ll send you a separate shipping confirmation email when your board ships.
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr><td><br/></td></tr>
+            <tr>
+                <td colspan="3">
+                    <span ><a href="" class="order-giftcard">Have a gift card?</a></span>
+                </td>
+            </tr>	
+            <tr><td><br/></td></tr>
+            <tr class="horizontal-line pt-5 mt-5">
+               <td colspan="3" class="horizontal-line"  ></td>
+            </tr>
+            <tr><td><br/></td></tr>
+            <tr class="content-styl">
+                <td colspan="2"><span>Subtotal</span></td>
+                <td><span>${{subtotal}}</span></td>
+            </tr>
+            <tr class="content-styl">
+                <td colspan="2"><span>Shipping</span></td>
+                <td><span>${{shipping}}</span></td>
+            </tr>
+            <tr><td><br/></td></tr>
+            <tr class="horizontal-line pt-5 mt-5">
+               <td colspan="3" class="horizontal-line"  ></td>
+            </tr>
+            <tr><td><br/></td></tr>
+            <tr>
+                <td ><span><strong>Total</strong></span></td>
+                <td><span class="algn-right">USD</span></td>
+                <td><strong><span> <h1>${{total}}</h1></span></strong></td>
+            </tr>
+
+        </table>
+    </div>

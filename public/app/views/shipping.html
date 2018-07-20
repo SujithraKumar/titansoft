@@ -1,0 +1,91 @@
+<div class="col-lg-7 col-md-12 col-sm-12 container  splitLeft ">
+  <div class="">
+    <header >
+        <div class="row pb-3">
+            <img class="img-algn" src="app/assets/boosted-logo.png" />
+        </div>
+        <div class="row set-font col-lg-12">
+            <span class="add-color">Customer information</span>
+            <span> &nbsp; <strong>></strong> &nbsp;</span>
+            <span >Shipping method</span>
+            <span> &nbsp;<strong> > </strong> &nbsp;</span>
+            <span>Payment method</span>
+        </div>
+    </header>
+    
+    <main>
+            <div class="d-flex flex-column flex-border mt-5">
+                <div class=" row p-2">
+                    <div class="col-sm">
+                      Contact
+                    </div>
+                    <div class=" pl-2 col-sm-6">
+                    
+                      {{userDetails.email}}
+                    </div>
+                    <div class="col-sm add-color">
+                      <span href="" ng-click="returnToCI()"> Change</span>
+                    </div>
+                </div>
+                <div>
+                    <hr/>
+                </div>
+               
+                <div class="row p-2">
+                    <div class="col-sm">
+                      Ship to
+                    </div>
+                    <div class="pl-2 col-sm-6">
+                      {{userDetails.firstName}}&nbsp;{{userDetails.address}}&nbsp;{{userDetails.zipcode}}
+                    </div>
+                    <div class="col-sm add-color">
+                      <span href="" ng-click="returnToCI()"> Change</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                 <h6 class="mb-4 mt-5 shipping-style">Shipping method</h6>
+                  <div class="d-flex flex-column flex-border">
+                <div class=" row p-2">
+                    <div class="col-sm-6">
+                      Free Ground Shipping
+                    </div>
+                    <div class=" pl-2 col-sm-4">
+                      
+                    </div>
+                    <div class="col-sm">
+                      Free
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 mt-5">
+                    <span class="add-color" ng-click="returnToCI()"> < Return to customer information</span>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4">
+                 <button type="button" class="btn btn-lg set-margin mt-4" ng-click="MoveToPayment()">Continue</button>
+                </div>
+            </div>
+
+       
+    </main>
+    <footer class="footer-algn">
+    <titan-footer></titan-footer>
+    </footer>
+
+
+  
+</div>
+
+<div class="col-lg-5 col-md-12 col-sm-12  split right" id="sidebar">
+  <div class="centered">
+    <right-panel></right-panel>
+  </div>
+</div>
+
+
+</div>

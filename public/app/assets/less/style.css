@@ -1,0 +1,271 @@
+
+body {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
+.main{
+  height: 759px;
+  display: outline;
+  background-color: black;
+  border-right: 2px solid black;
+}
+
+header .img-algn{
+  text-align: center;
+  max-height: 2.85714em;
+  margin-top: 60px;
+}
+
+header .set-font{
+  font-size: 12px;
+}
+
+header .btn-styl-1 {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+form .mdfy-width{
+  width: 50%;
+}
+
+form .sur-name{
+  width: 25%;
+  float: left;
+}
+ .set-margin{
+
+  background-color: #f0532d !important;
+  display: block;
+    width: 100px;
+    min-width: 40%;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 2%;
+    font-size: 14px;
+
+}
+
+
+form .padd{
+  background-color: white !important;
+  color: #495057 !important;
+  border-color: #ced4da !important;
+  padding: 10px 30px 10px 30px;
+}
+
+form .zipcode{
+    padding: 10px 30px 10px 30px;
+}
+
+@media only screen and  (max-width: 1580px) and (min-width: 1250){
+  .maincontainer {
+    width: 1140px !important;
+  }
+  
+}
+
+@media only screen and (max-width: 999px){
+  .maincontainer {
+    width: 970px;
+  }
+  
+}
+
+@media only screen and (min-width: 798px){ 
+  .maincontainer {
+    width: 770px;
+  }
+
+}
+@media (max-width: 798px){ 
+  .maincontainer {
+    width: 550px;
+  }
+   #sidebar{
+    display: none;
+  }
+  form .mdfy-width{
+  width: 100%;
+}
+  .flex-border {
+    border: 2px solid #f2f2f2;
+    width: 100% !important;
+    border-radius: 5px;
+  }
+
+form .sur-name{
+  width: 50%;
+  float: left;
+}
+
+}
+
+.right-panel{
+  right: 100%;
+  background-color: #f2f2f2;
+}
+
+.right-panel .item-image{
+  width: 100px;
+}
+.align-right{
+  float: right;
+}
+
+table .horizontal-line{
+  border-bottom: 3px solid #a3a0a0;;
+}
+
+table .notes{
+   background-color: white;
+   
+}
+.notes-hdr{
+  font-family: Helvetica-Bold, sans-serif;
+  font-size: 14px;
+  color: #494949;
+}
+
+.reduced-font{
+  font-size: 10px;
+}
+
+.logoButton{
+  text-align: center;
+  display: block;
+    width: 100px;
+    min-width: 30%;
+    max-width: 100%;
+    margin: 0px 3px 3px;
+    position: relative;
+    padding: 15px 2%;
+}
+
+table .notes .notes-bdy li{
+  font-family: Helvetica-Bold, sans-serif;
+  font-size: 14px;
+  color: #494949;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+table .notes .notes-bdy .affirm-logo{
+  color: skyblue;
+}
+
+table .order-giftcard{
+   color: #80c6d2;
+}
+table .dot{
+     height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    bottom: 109px;
+    left: 85px;
+    text-align: center;
+}
+
+table .content-styl{
+  font-family: Helvetica-Bold, sans-serif;
+  font-size: 14px;
+  color: #494949;
+}
+
+table .algn-right{
+  float: right;
+}
+
+
+.flx{
+  display: flex;
+}
+
+.split {
+    height: 100%;
+    width: 48%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+
+}
+
+.splitLeft {
+   
+     width: 60%;
+    
+}
+
+.left {
+    left: 0;
+    background-color: white;
+}
+
+.right {
+    right: 0;
+    background-color: #f2f2f2;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.flex-border{
+  border: 2px solid #f2f2f2;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.shipping-style{
+  color: #494949;;
+
+}
+.add-color{
+color: #80c6d2;
+
+}
+
+.add-red{
+  color:red;
+}
+
+.border-color{
+  border-color: red;
+}
+
+
+.form-styl{
+  margin: 20px;
+}
+
+.creditcard-collapse{
+  background-color: #d9d9d9
+}
+
+footer .footer-styl{
+  font-size: 12px;
+}
+
+.ftr-mgn{
+  margin-bottom: 20px;
+}
+
+.footer-algn{
+  margin-top: 150px;
+}
+
+hr{
+  margin:0px !important;
+}

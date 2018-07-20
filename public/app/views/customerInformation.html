@@ -1,0 +1,110 @@
+﻿<div class="col-lg-7 col-md-12 col-sm-12 container  splitLeft ">
+  <div class="">
+    <header >
+        <div class="row pb-3">
+            <img class="img-algn" src="app/assets/boosted-logo.png" />
+        </div>
+        <div class="row set-font col-lg-12">
+            <span>Customer information</span>
+            <span> &nbsp; <strong>></strong> &nbsp;</span>
+            <span class="add-color">Shipping method</span>
+            <span> &nbsp;<strong> > </strong> &nbsp;</span>
+            <span>Payment method</span>
+        </div>
+        <div class="row mt-3 pb-3 col-lg-8 col-md-6 col-sm-6">
+           <button type="button" class="btn btn-dark    col-lg-4 col-md-6 col-sm-12  logoButton">GPAy</button>
+           <button type="button" class="btn btn-warning col-lg-4 col-md-6 col-sm-12 logoButton">Amazon pay</button>
+        </div>
+    </header>
+    <hr/>
+    <main>
+      <form name="shippingAddress">
+          <div class="form-group">
+              <h6 class="mb-4">Contact Information</h6>
+              <input type="email"  ng-class="{'border-color':submitted && !userDetails.email}"  class="form-control mdfy-width" id="InputEmail" name="email" ng-model="userDetails.email" placeholder="Email" required>
+              <span class="add-red mb-2" ng-if="submitted && ((shippingAddress.email.$touched && shippingAddress.email.$invalid) || shippingAddress.email.$untouched) ">Please enter a valid email address</span>
+              
+          </div>
+          <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="emailCheck">
+              <label class="form-check-label" for="emailCheck"><small>Keep me up to date on news and exclusive offers</small></label>
+          </div>
+
+          <div class="form-group">
+              <h6 class="mb-4 mt-5">Shipping address</h6>
+              <div>
+              <input type="text" ng-class="{'border-color':submitted && !userDetails.firstName}"  class="form-control sur-name mb-3" id="FirstName" name="firstName" ng-model="userDetails.firstName" placeholder="First name" required>
+
+              <input type="text" ng-class="{'border-color':submitted && !userDetails.lastName}"   class="form-control sur-name ml-2 mb-3" id="LastName" name="lastName" ng-model="userDetails.lastName" placeholder="Last name" required>
+              </div>
+              
+
+              <input type="text" ng-class="{'border-color':submitted && !userDetails.address}"  class="form-control mdfy-width mb-3 " id="Address" name="address" ng-model="userDetails.address" placeholder="Address" required>
+
+              <span class="add-red mb-2" ng-show="submitted && ((shippingAddress.lastName.$touched && shippingAddress.address.$invalid) || shippingAddress.address.$untouched) ">Please enter your address</span>
+
+              <input type="text" class="form-control mdfy-width mb-3" id="Apartment" ng-model="userDetails.apartment" placeholder="Apartment,suite (optional)">
+
+
+
+              <input type="text" ng-class="{'border-color':submitted && !userDetails.city}"  class="form-control mdfy-width mb-3" id="City" name="city" ng-model="userDetails.city" placeholder="City">
+
+              <span class="add-red mb-2" ng-show="submitted && ((shippingAddress.city.$touched && shippingAddress.city.$invalid) || shippingAddress.city.$untouched) ">Please enter your city</span>
+
+              <div class="row pl-1 col-lg-9 col-md-8 col-sm-12 ">
+              <div class="col-lg-3 col-md-12 col-sm-12 dropdown show " >
+                    <a class="btn btn-secondary dropdown-toggle  mb-3 mr-2 padd" href=""  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="country">
+                   {{userDetails.country && userDetails.country || 'Country'}}
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" ng-click="setCountry(country)" ng-repeat="country in countries"  href="">{{country}}</a>
+                     
+                    </div>
+              </div>
+
+               <div class="col-lg-3 col-md-12 col-sm-12 dropdown show ">
+                    <a class="btn btn-secondary dropdown-toggle mb-3 mr-2 padd" href="" ng-class="{'border-color':submitted }" role="button" id="dropdownMenuLink" data-toggle="dropdown" name="state" aria-haspopup="true" aria-expanded="false" >
+                     {{userDetails.state && userDetails.state || 'State'}} &nbsp; &nbsp; 
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" ng-click="setState(state)" ng-repeat="state in states" href="">{{state}}</a>
+                    </div>
+              </div>
+             
+
+              <div class="">
+                  <input type="text" ng-class="{'border-color':submitted && !userDetails.zipcode}"  class="form-control col-lg-6 col-md-11 col-sm-12 mb-3 ml-2 zipcode" ng-model="userDetails.zipcode" name="zipcode" id="zipcode"  placeholder="zipcode">
+
+                   <span class="add-red mb-2" ng-show=" submitted && ((shippingAddress.zipcode.$touched && shippingAddress.zipcode.$invalid) || shippingAddress.zipcode.$untouched) ">Please enter your zipcode</span>
+              </div>
+              </div>
+
+              <input type="number" ng-class="{'border-color':submitted && !userDetails.phone}"  class="form-control mdfy-width col-md-11 mb-3" id="Phone " name="phone" ng-model="userDetails.phone" placeholder="Phone">
+              <span  class="add-red mb-2" ng-show="submitted && ((shippingAddress.phone.$touched && shippingAddress.phone.$invalid) || shippingAddress.phone.$untouched) ">Please enter your phone number</span>
+
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="saveDetails">
+                  <label class="form-check-label" for="saveDetails">Save this information for next time</label>
+              </div>
+              <div class="wrapper">
+                  <button type="button" class="btn btn-lg set-margin mt-4" ng-click="MoveToShipping()">Continue</button>
+              </div>
+              
+          </div>
+         
+      </form>
+    </main>
+    <footer>
+      <titan-footer></titan-footer>  
+    </footer> 
+</div>
+
+<div class="col-lg-5 col-md-12 col-sm-12  split right" id="sidebar">
+  <div class="centered">
+    <right-panel></right-panel>
+  </div>
+</div>
+
+
